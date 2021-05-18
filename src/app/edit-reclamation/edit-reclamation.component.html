@@ -1,0 +1,84 @@
+<div class="aboutright">
+    <h4 style="text-align: center">Modifier une reclamation</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title text-center">Reclamation</h5>
+          <hr />
+        </div>
+        <div class="card-body">
+          <form [formGroup]="this.registerForm" (ngSubmit)="updateReclamation()">
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>email</label>
+                    <input
+                      type="email"
+                      formControlName="email"
+                      class="form-control"
+                      placeholder="email"
+                      required
+                    />
+    
+                    </div>
+    
+                  </div>
+                </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>status</label>
+                    <textarea
+                      formControlName="status"
+                      class="form-control"
+                      placeholder="status"
+                      required
+                    ></textarea>
+                    </div>
+                  </div>
+                </div>
+    
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>subject</label>
+                    <textarea
+                      formControlName="subject"
+                      class="form-control"
+                      placeholder="subject"
+                      required
+                    ></textarea>
+                    </div>
+                  </div>
+                </div>
+    
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>reclamation_date</label>
+                    <input
+                      type="date"
+                      formControlName="reclamation_date"
+                      class="form-control"
+                      placeholder="reclamation_date"
+                      required
+                    />
+                    </div>
+                  </div>
+                </div>
+    
+              
+              <div class="row">
+                <div class="update ml-auto mr-auto" >
+                  <button type="submit" class="btn btn-primary btn-round" style="background-color: #13ab9f;">
+                    Ajouter
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,75 @@
+<div class="col-md-12">
+    <h4 class="remove-margin"> Liste des Livraisons</h4>
+<div class="card">
+<div class="card-header">
+  <!-- <div class="float-right"> -->
+    <a routerLink="/ajout-livraison" class="btn btn-info btn-sm">Ajouter une Livraison</a>
+  <!-- </div> -->
+</div>
+<div class="card-body">
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead class="text-primary">
+        <th>
+          Id
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Date de Livraison
+        </th>
+        <th>
+          Prix de Livraison
+        </th>
+        <th>
+          Type de Livraison
+        </th>
+        <th>
+          distance
+        </th>
+        <th>
+          Action
+        </th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of userList">
+          <td>
+              {{ row.id }}
+          </td>
+          <td>
+              {{ row.status }}
+          </td>
+          <td>
+            {{ row.delivery_date }}
+        </td>
+          <td>
+              {{ row.price }}
+          </td>
+          <td>
+            {{ row.moyenDeTransport }}
+        </td>
+        <td>
+          {{ row.distance }}
+      </td>
+          <td>
+            <div>
+                <a (click)="editUser(row.id)"  class="btn btn-warning btn-sm">Edit</a>
+            </div>
+            <div>
+              <a (click)="del(row.id)"  class="btn btn-danger">Delete</a>
+          </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<router-outlet></router-outlet>
+</div>
+</div>

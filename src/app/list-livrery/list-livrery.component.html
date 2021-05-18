@@ -1,0 +1,75 @@
+  <div class="col-md-12">
+          <h4 class="remove-margin"> Liste des livreurs</h4>
+    <div class="card">
+      <div class="card-header">
+        <!-- <div class="float-right"> -->
+          <a routerLink="/create-delivery" class="btn btn-info btn-sm">Ajouter un livreur</a>
+        <!-- </div> -->
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead class="text-primary">
+              <th>
+                Id
+              </th>
+              <th>
+                name
+              </th>
+              <th>
+                last name
+              </th>
+              <th>
+                salaire
+              </th>
+              <th>
+                bonus
+              </th>
+              <th>
+                distance
+              </th>
+              <th>
+                Action
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of userList">
+                <td>
+                    {{ row.id }}
+                </td>
+                <td>
+                    {{ row.name }}
+                </td>
+                <td>
+                  {{ row.lastname }}
+              </td>
+                <td>
+                    {{ row.salaire }}
+                </td>
+                <td>
+                  {{ row.bonus }}
+              </td>
+              <td>
+                {{ row.distance }}
+            </td>
+                <td>
+                  <div>
+                      <a (click)="editUser(row.id)"  class="btn btn-warning btn-sm">Edit</a>
+                  </div>
+                  <div>
+                    <a (click)="del(row.id)"  class="btn btn-danger">Delete</a>
+                </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-12">
+      <router-outlet></router-outlet>
+  </div>
+</div>

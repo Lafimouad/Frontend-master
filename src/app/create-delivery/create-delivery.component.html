@@ -1,0 +1,95 @@
+<div class="aboutright">
+  <h4 style="text-align: center">Ajouter un livreur</h4>
+</div>
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title text-center">Livreur</h5>
+        <hr />
+      </div>
+      <div class="card-body">
+        <form [formGroup]="this.registerForm" (ngSubmit)="addLivreur()">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Nom</label>
+                <input
+                  type="text"
+                  formControlName="name"
+                  class="form-control"
+                  placeholder="Nom"
+                  required
+                />
+
+                </div>
+
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Prénom</label>
+                <textarea
+                  formControlName="lastname"
+                  class="form-control"
+                  placeholder="Prénom"
+                  required
+                ></textarea>
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Salaire</label>
+                <textarea
+                  formControlName="salaire"
+                  class="form-control"
+                  placeholder="Salaire"
+                  required
+                ></textarea>
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Bonus</label>
+                <textarea
+                  formControlName="bonus"
+                  class="form-control"
+                  placeholder="Bonus"
+                  required
+                ></textarea>
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>distance</label>
+                <textarea
+                  formControlName="distance"
+                  class="form-control"
+                  placeholder="Distance"
+                  required
+                ></textarea>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto" >
+              <button type="submit" class="btn btn-primary btn-round" style="background-color: #13ab9f;">
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

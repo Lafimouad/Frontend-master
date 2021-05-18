@@ -1,0 +1,97 @@
+<div class="aboutright">
+    <h4 style="text-align: center">Ajouter une Livraison</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title text-center">Livraison</h5>
+          <hr />
+        </div>
+        <div class="card-body">
+          <form [formGroup]="this.registerForm" (ngSubmit)="addLivraison()">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>price</label>
+                  <input
+                    type="text"
+                    formControlName="price"
+                    class="form-control"
+                    placeholder="price"
+                    required
+                  />
+  
+                  </div>
+  
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>status</label>
+                  <textarea
+                    formControlName="status"
+                    class="form-control"
+                    placeholder="status"
+                    required
+                  ></textarea>
+                  </div>
+                </div>
+              </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>moyenDeTransport</label>
+                  <textarea
+                    formControlName="moyenDeTransport"
+                    class="form-control"
+                    placeholder="moyenDeTransport"
+                    required
+                  ></textarea>
+                  </div>
+                </div>
+              </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>delivery_date</label>
+                  <input
+                    type="date"
+                    formControlName="delivery_date"
+                    class="form-control"
+                    placeholder="delivery_date"
+                    required
+                  />
+                  </div>
+                </div>
+              </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>distance</label>
+                  <textarea
+                    formControlName="distance"
+                    class="form-control"
+                    placeholder="Distance"
+                    required
+                  ></textarea>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="update ml-auto mr-auto" >
+                <button type="submit" class="btn btn-primary btn-round" style="background-color: #13ab9f;">
+                  Ajouter
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
